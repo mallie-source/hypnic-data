@@ -234,6 +234,51 @@ body.menu-open .menu-overlay{
   background: linear-gradient(180deg, rgba(141,166,255,.25), rgba(11,13,16,.02));
   overflow:hidden;
 }
+/* --- Hero animated media --- */
+.hero-media{
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius2);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(141,166,255,.20), rgba(11,13,16,.02));
+}
+
+#heroCanvas{
+  width: 100%;
+  height: 420px; /* adjust if you want taller */
+  display: block;
+}
+
+.hero-glass{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  padding: 16px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 22px 70px rgba(11,13,16,.10);
+}
+
+/* Make the hero canvas responsive on small screens */
+@media (max-width: 980px){
+  #heroCanvas{ height: 360px; }
+}
+
+/* Respect reduced motion: show a still background */
+@media (prefers-reduced-motion: reduce){
+  #heroCanvas{ display: none; }
+  .hero-media{
+    background: radial-gradient(circle at 20% 10%, rgba(141,166,255,.18), transparent 60%),
+                radial-gradient(circle at 80% 30%, rgba(141,166,255,.12), transparent 55%),
+                linear-gradient(180deg, rgba(141,166,255,.20), rgba(11,13,16,.02));
+  }
+}
 .visual-row{
   display:flex;
   gap: 8px;
