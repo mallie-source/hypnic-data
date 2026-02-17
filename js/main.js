@@ -16,7 +16,8 @@ function closeMenu(){
 menuBtn?.addEventListener("click", openMenu);
 closeBtn?.addEventListener("click", closeMenu);
 overlay?.addEventListener("click", (e) => {
-  if (e.target === overlay) closeMenu();
+  // Close when clicking anywhere outside the panel
+  if (!e.target.closest(".menu-panel")) closeMenu();
 });
 
 // Close menu on link click

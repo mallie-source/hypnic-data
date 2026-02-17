@@ -149,9 +149,12 @@ img{ max-width:100%; display:block; }
   position: fixed;
   inset: 0;
   background: rgba(11,13,16,.35);
-  z-index: 100;
+  z-index: 9999;
   display:flex;
   justify-content:flex-end;
+
+  /* critical */
+  pointer-events: auto;
 }
 .menu-panel{
   width: min(420px, 92vw);
@@ -161,7 +164,11 @@ img{ max-width:100%; display:block; }
   padding: 18px;
   display:flex;
   flex-direction:column;
+
+  /* critical */
+  pointer-events: auto;
 }
+
 .menu-top{
   display:flex;
   align-items:center;
