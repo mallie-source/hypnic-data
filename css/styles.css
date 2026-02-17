@@ -334,7 +334,21 @@ body.menu-open .menu-overlay{
 .work-item:hover .work-title{
   transform: translateX(6px);
 }
-.work-year, .work-tag{ color: var(--muted); font-size: 13px; text-align:right; }
+.work-year, .work-tag{
+  color: var(--muted);
+  font-size: 13px;
+  text-align:right;
+  transition: opacity .25s ease;
+}
+
+.work-item:hover .work-year,
+.work-item:hover .work-tag{
+  opacity: .6;
+}
+
+.work-item{
+  cursor: pointer;
+}
 
 /* --- Cards --- */
 .we-build-head{
@@ -488,6 +502,28 @@ body.menu-open .menu-overlay{
   justify-content:space-between;
   gap: 14px;
   background: linear-gradient(180deg, rgba(141,166,255,.20), rgba(11,13,16,.02));
+}
+
+/* ----- Section reveal transitions ----- */
+.reveal{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* --- Footer --- */
