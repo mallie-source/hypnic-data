@@ -150,12 +150,14 @@ img{ max-width:100%; display:block; }
   inset: 0;
   background: rgba(11,13,16,.35);
   z-index: 9999;
-  display:flex;
-  justify-content:flex-end;
-
-  /* critical */
-  pointer-events: auto;
+  display: none;            /* IMPORTANT: hidden by default */
+  justify-content: flex-end;
 }
+
+body.menu-open .menu-overlay{
+  display: flex;            /* becomes visible when menu is open */
+}
+
 .menu-panel{
   width: min(420px, 92vw);
   height: 100%;
