@@ -379,6 +379,20 @@ body.menu-open .menu-overlay{
   line-height: 1.7;
 }
 
+.services-cta{
+  margin-top: 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.services-cta p{
+  margin: 0;
+  line-height: 1.6;
+}
+
 /* --- Tabs / Panels --- */
 .process-head{ margin-bottom: 10px; }
 .process-tabs, .pricing-tabs{
@@ -424,10 +438,13 @@ body.menu-open .menu-overlay{
   border-color: rgba(141,166,255,.65);
   box-shadow: 0 20px 70px rgba(11,13,16,.10);
 }
+.price-card .price-top{
+  padding-top: 28px; /* makes space so badge never overlaps */
+}
 .badge{
   position:absolute;
   top: 14px;
-  right: 14px;
+  left: 14px;
   font-size: 11px;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -435,6 +452,7 @@ body.menu-open .menu-overlay{
   border-radius: 999px;
   background: rgba(141,166,255,.28);
   border: 1px solid rgba(141,166,255,.55);
+  z-index: 2;
 }
 .price-top{ padding-top: 6px; }
 .price{
