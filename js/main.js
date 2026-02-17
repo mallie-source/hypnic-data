@@ -43,6 +43,26 @@ document.addEventListener("DOMContentLoaded", () => {
     a.addEventListener("click", () => closeMenu());
   });
 
+    // Process tabs (Project Sprint / Ongoing Support)
+  const processTabs = document.querySelectorAll(".process-tabs .tab");
+  const processPanels = document.querySelectorAll(".process-panels .panel");
+
+  processTabs.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tab = btn.dataset.tab;
+
+      processTabs.forEach((b) => {
+        const isActive = b === btn;
+        b.classList.toggle("active", isActive);
+        b.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+
+      processPanels.forEach((p) => {
+        p.classList.toggle("active", p.dataset.panel === tab);
+      });
+    });
+  });
+  
   // Footer year
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
