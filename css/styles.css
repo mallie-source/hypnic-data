@@ -316,10 +316,24 @@ body.menu-open .menu-overlay{
   display:grid;
   grid-template-columns: 1fr 90px 120px;
   gap: 12px;
-  padding: 16px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--line);
+  position: relative;
+  transition: background .25s ease, padding-left .25s ease;
 }
-.work-title{ font-weight: 650; letter-spacing: -0.01em; }
+.work-item:hover{
+  background: rgba(11,13,16,.03);
+  padding-left: 10px;
+}
+.work-title{
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  transition: transform .25s ease;
+}
+
+.work-item:hover .work-title{
+  transform: translateX(6px);
+}
 .work-year, .work-tag{ color: var(--muted); font-size: 13px; text-align:right; }
 
 /* --- Cards --- */
