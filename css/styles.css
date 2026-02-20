@@ -682,3 +682,16 @@ body.menu-open .menu-overlay{
     margin-top: 30px;
   }
 }
+.process-visual {
+  margin: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.process-visual img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
