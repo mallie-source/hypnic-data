@@ -636,3 +636,49 @@ body.menu-open .menu-overlay{
   .nav-links{ display:none; }
   .menu-btn{ display:inline-flex; }
 }
+/* --- About Image --- */
+.about-left{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+.about-image{
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #f6f6f7;
+  box-shadow: 0 30px 80px rgba(11,13,16,0.08);
+}
+
+.about-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Process section layout with GIF --- */
+
+.process-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.process-right img {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 980px) {
+  .process-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .process-right {
+    margin-top: 30px;
+  }
+}
