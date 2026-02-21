@@ -695,3 +695,110 @@ body.menu-open .menu-overlay{
   border-radius: 18px;
   display: block;
 }
+/* ═══════════════════════════════════════════════════════════════
+   HYPNIC — SECTION TRANSITIONS (append to end of styles.css)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Nav shrink on scroll */
+.nav{
+  transition: height .3s ease, box-shadow .3s ease, background .3s ease;
+}
+.nav-scrolled{
+  height: 68px !important;
+  box-shadow: 0 4px 24px rgba(11,13,16,0.07);
+}
+
+/* ── Base state for all animated elements ── */
+.anim{
+  /* default: invisible and slightly offset */
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 0.75s;
+  transition-property: opacity, transform, clip-path;
+  will-change: opacity, transform;
+}
+
+/* ── Revealed state ── */
+.anim.in-view{
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: inset(0% 0% 0% 0%) !important;
+}
+
+/* ── Stagger delay via CSS custom property --i ── */
+.anim[style*="--i"]{
+  transition-delay: calc(var(--i, 0) * 0.08s);
+}
+
+/* ── Variant: fade up (eyebrows, paragraphs, CTAs) ── */
+.anim-fade-up{
+  transform: translateY(22px);
+}
+
+/* ── Variant: word-by-word heading animation ── */
+.word-wrap{
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* tiny gap between words */
+  margin-right: 0.22em;
+}
+.word{
+  display: inline-block;
+  transform: translateY(105%);
+  opacity: 0;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.45s ease;
+  will-change: transform, opacity;
+}
+.word.in-view{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ── Variant: card scale + fade ── */
+.anim-card{
+  transform: translateY(18px) scale(0.98);
+}
+
+/* ── Variant: slide from left (work items) ── */
+.anim-slide-left{
+  transform: translateX(-18px);
+}
+
+/* ── Variant: image clip-path wipe (images reveal like a curtain lifts) ── */
+.anim-wipe{
+  clip-path: inset(0% 0% 100% 0%);
+  opacity: 1 !important; /* wipe doesn't need opacity fade */
+  transition-duration: 0.9s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-wipe.in-view{
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+/* ── Hero visual: keep translateY from parallax JS but add entrance ── */
+.hero-media.anim{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.hero-media.anim.in-view{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Remove the old reveal system (superseded) ── */
+/* The old .reveal / .is-visible classes are now unused — 
+   you can delete those rules from styles.css if you want to clean up,
+   but leaving them won't cause any issues. */
+
+/* ── Reduced motion: disable everything ── */
+@media (prefers-reduced-motion: reduce){
+  .anim, .word, .anim-wipe{
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+}
