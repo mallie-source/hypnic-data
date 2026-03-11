@@ -1,36 +1,43 @@
 <!doctype html>
 <html lang="en">
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8ce191d0a874a3c9bcea1e30383e7a3"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8ce191d0a874a3c9bcea1e30383e7a3"}'></script>
+<!-- End Cloudflare Web Analytics -->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hypnic Data</title>
-  <link rel="icon" type="image/png" href="/assets/logo.png">
-<link rel="apple-touch-icon" href="/assets/logo.png">
-  <meta name="description" content="Operational Data Clarity Sprint (7 days). We clean, structure, and explain messy Excel/CSV data so SMEs can make decisions fast—without hiring internally." />
+  <title>Hypnic Data — Operational Data Clarity</title>
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <link rel="apple-touch-icon" href="/assets/logo.png" />
+  <meta name="description" content="Hypnic Data turns spreadsheet chaos into structured, decision-ready reporting for South African SMEs. 7-day Data Clarity Sprint. No hiring. No long onboarding. Just clarity." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
   <!-- NAV -->
   <header class="nav">
-    <a class="brand" href="#home" aria-label="Hypnic home">
+    <a class="brand" href="#home" aria-label="Hypnic Data home">
       <img src="assets/logo.png" alt="Hypnic logo" />
-      <span class="brand-text">Hypnic</span>
+      <div>
+        <div class="brand-text">Hypnic</div>
+        <div class="brand-sub">Data Systems</div>
+      </div>
     </a>
 
     <nav class="nav-links" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#works">Case Studies</a>
       <a href="#services">Services</a>
-      <!-- Careers removed -->
       <a href="#pricing">Pricing</a>
-      <a class="btn small nav-cta" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book</a>
+      <a class="btn small nav-cta" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a Call</a>
     </nav>
 
-    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
-      Menu
-    </button>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
   </header>
 
   <!-- MOBILE MENU -->
@@ -40,181 +47,376 @@
         <span class="menu-title">Menu</span>
         <button class="menu-close" type="button" aria-label="Close menu">Close</button>
       </div>
-
       <div class="menu-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#works">Works</a>
+        <a href="#works">Case Studies</a>
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a class="btn" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a Call</a>
-        <a class="muted-link" href="mailto:hello@hypnic.net">hello@hypnic.net</a>
+        <a class="muted-link" href="mailto:business@hypnic.net">business@hypnic.net</a>
       </div>
     </div>
   </div>
 
   <!-- HERO -->
   <main id="home" class="section hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+
     <div class="container">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Hypnic — Data Systems</p>
-          <h1 class="h1">WE BUILD OPERATIONAL DATA CLARITY.</h1>
+          <div class="hero-eyebrow">
+            <div class="hero-eyebrow-line"></div>
+            <span class="eyebrow" style="margin:0">Hypnic — Data Systems</span>
+          </div>
+
+          <h1 class="h1">
+            Turning your<br/>
+            <em>operational data</em><br/>
+            into clarity.
+          </h1>
+
           <p class="lead">
-            <b>Operational Data Clarity Sprint (7 days).</b>
-            We take spreadsheet-based operations and turn them into structured datasets, KPI reporting, and a written summary your team can actually use.
-            No hiring. No long onboarding. Just clarity.
+            We take spreadsheet-based operations and build clean datasets,
+            repeatable KPI reporting, and a written summary your team can
+            act on — in 7 days.
           </p>
 
           <div class="hero-cta">
             <a class="btn" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a 30-min Call</a>
-            <a class="btn ghost" href="#services">Explore services</a>
+            <a class="btn ghost" href="#services">Explore Services</a>
           </div>
 
           <div class="hero-meta">
-            <span>hello@hypnic.net</span>
+            <span>business@hypnic.net</span>
             <span>South Africa · Remote</span>
+            <span>7-day turnaround</span>
           </div>
         </div>
 
-        <!-- Visual block (kept to match structure) -->
-       <div class="hero-visual" aria-hidden="true">
-  <div class="hero-media">
-    <canvas id="heroCanvas"></canvas>
-
-    <!-- optional glass overlay card (keeps the “premium” look) -->
-    <div class="hero-glass">
-      <p class="visual-kicker">DATA → CLARITY</p>
-      <p class="visual-big">7 days</p>
-      <p class="visual-small">Clean dataset · KPI pack · Insight summary</p>
-    </div>
-  </div>
-</div>
-      </div>
-
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>HYPNIC DATA SYSTEMS</span>
-          <span>HYPNIC DATA SYSTEMS</span>
-          <span>HYPNIC DATA SYSTEMS</span>
-          <span>HYPNIC DATA SYSTEMS</span>
-          <span>HYPNIC DATA SYSTEMS</span>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-media">
+            <canvas id="heroCanvas"></canvas>
+            <div class="hero-glass">
+              <p class="visual-kicker">Data → Clarity</p>
+              <p class="visual-big">7 days</p>
+              <p class="visual-small">Clean dataset · KPI pack · Insight summary</p>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   </main>
 
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Hypnic Data Systems</span>
+      <span class="accent">◈</span>
+      <span>Operational Clarity Sprint</span>
+      <span class="accent">◈</span>
+      <span>South Africa</span>
+      <span class="accent">◈</span>
+      <span>7-Day Turnaround</span>
+      <span class="accent">◈</span>
+      <span>Hypnic Data Systems</span>
+      <span class="accent">◈</span>
+      <span>Operational Clarity Sprint</span>
+      <span class="accent">◈</span>
+      <span>South Africa</span>
+      <span class="accent">◈</span>
+      <span>7-Day Turnaround</span>
+      <span class="accent">◈</span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">7<span>days</span></div>
+          <div class="stat-label">Sprint turnaround</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span>R</span>8k–18k</div>
+          <div class="stat-label">Typical sprint range</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100<span>%</span></div>
+          <div class="stat-label">Remote delivery</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Long contracts required</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ABOUT -->
   <section id="about" class="section">
-    <div class="container split">
-      <div class="about-left">
-  <h2 class="h2">About</h2>
+    <div class="container">
+      <div class="section-rule">
+        <div class="section-rule-line"></div>
+        <span class="section-rule-label">About</span>
+        <div class="section-rule-line"></div>
+      </div>
 
-  <div class="about-image">
-  <img src="assets/about-visual.gif" alt="Operational data systems visual">
-</div>
-</div>
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <!-- PLACEHOLDER: Replace with founder photo or team photo -->
+          <div class="about-img-placeholder">
+            <div class="ph-icon">◈</div>
+            <div class="ph-label">[ Photo placeholder ]</div>
+          </div>
+          <p class="about-img-caption">Malwandla Matelakengisa — Founder, Hypnic Data</p>
+        </div>
 
-      <div class="prose">
-        <p>
-          Hypnic Data helps small-to-medium teams turn spreadsheet chaos into structured, decision-ready reporting.
-          We deliver clean datasets, repeatable templates, KPI views, and a written summary you can act on.
-        </p>
+        <div class="about-right">
+          <span class="eyebrow">Who we are</span>
+          <h2 class="h2">Data clarity for<br/>SA businesses.</h2>
 
-        <p class="subhead">What we believe</p>
-        <p>
-          Data is only valuable when it’s reliable, reproducible, and easy to interpret. Our sprint is designed to remove ambiguity,
-          standardize structure, and build a reporting foundation you can reuse weekly.
-        </p>
+          <div class="about-body">
+            <p>
+              Hypnic Data helps small-to-medium teams across South Africa turn
+              spreadsheet chaos into structured, decision-ready reporting.
+              We deliver clean datasets, repeatable templates, KPI views, and
+              a written summary you can act on immediately.
+            </p>
+            <p>
+              We understand how South African businesses actually operate —
+              on Sage, Pastel, and Excel. Our sprint is built around your
+              existing tools, not new software you have to learn.
+            </p>
+          </div>
+
+          <div class="about-quote">
+            <p>Data is only valuable when it is reliable, reproducible, and easy to interpret.</p>
+          </div>
+
+          <div class="about-tags">
+            <span class="about-tag">Property Management</span>
+            <span class="about-tag">Construction</span>
+            <span class="about-tag">Distribution</span>
+            <span class="about-tag">Recruitment</span>
+            <span class="about-tag">Healthcare</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- WORKS -->
-  <section id="works" class="section">
+  <!-- CASE STUDIES -->
+  <section id="works" class="section" style="padding-top:0">
     <div class="container">
-      <div class="works-head">
-        <p class="eyebrow">Case Studies</p>
-        <h2 class="h2">SELECTED<br/>CASE STUDIES</h2>
-        <p class="muted">(examples - client names available on request)</p>
+      <div class="section-rule">
+        <div class="section-rule-line"></div>
+        <span class="section-rule-label">Case Studies</span>
+        <div class="section-rule-line"></div>
+      </div>
+
+      <div class="works-header">
+        <div>
+          <span class="eyebrow">Selected work</span>
+          <h2 class="h2">Case Studies</h2>
+        </div>
+        <p class="muted" style="font-size:12px;max-width:240px;text-align:right;">Client names available on request</p>
       </div>
 
       <div class="works-list">
-        <!-- Placeholders: you will replace later -->
         <a class="work-item" href="#pricing">
           <span class="work-title">Sales Export Cleanup → Weekly KPI Pack</span>
           <span class="work-year">2026</span>
           <span class="work-tag">Reporting</span>
+          <span class="work-arrow">→</span>
         </a>
         <a class="work-item" href="#pricing">
           <span class="work-title">Inventory Sheet Structuring → Reorder Visibility</span>
           <span class="work-year">2026</span>
           <span class="work-tag">Operations</span>
+          <span class="work-arrow">→</span>
+        </a>
+        <a class="work-item" href="#pricing">
+          <span class="work-title">Invoice Reconciliation → Automated Monthly Checker</span>
+          <span class="work-year">2026</span>
+          <span class="work-tag">Property</span>
+          <span class="work-arrow">→</span>
         </a>
         <a class="work-item" href="#pricing">
           <span class="work-title">Monthly Reporting Template → Owner Dashboard</span>
           <span class="work-year">2026</span>
           <span class="work-tag">Insights</span>
+          <span class="work-arrow">→</span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- VALUE PROPS -->
-  <section class="section">
+  <section class="section" style="padding-top:0">
     <div class="container">
-      <div class="we-build-head">
-        <p class="eyebrow">WE BUILD</p>
-        <h2 class="h2">REPORTING<br/>FOR YOUR OPERATIONS</h2>
+      <div class="cards-header">
+        <div>
+          <span class="eyebrow">Why Hypnic</span>
+          <h2 class="h2">Reporting built<br/>for your operations.</h2>
+        </div>
       </div>
 
       <div class="cards-4">
         <article class="card">
           <p class="card-num">(01)</p>
           <h3 class="h3">Fast clarity in 7 days</h3>
-          <p>Audit inputs, standardize formats, and produce a dataset you can trust—within a week.</p>
+          <p>Audit inputs, standardise formats, and produce a dataset you can trust — within a week.</p>
         </article>
-
         <article class="card">
           <p class="card-num">(02)</p>
-          <h3 class="h3">Built for SMEs</h3>
-          <p>Designed for spreadsheet-based teams. Minimal friction, clean handover, and practical outputs.</p>
+          <h3 class="h3">Built for SA SMEs</h3>
+          <p>Designed for Sage, Pastel, and Excel-based teams. Minimal friction, clean handover, practical outputs.</p>
         </article>
-
         <article class="card">
           <p class="card-num">(03)</p>
           <h3 class="h3">Clarity, not just files</h3>
-          <p>Dataset + templates + KPI view + written insights. You’ll know what matters and why.</p>
+          <p>Dataset + templates + KPI view + written insights. You will know what matters and why.</p>
         </article>
-
         <article class="card">
           <p class="card-num">(04)</p>
           <h3 class="h3">Repeatable systems</h3>
-          <p>Reporting becomes routine. Structure is documented so your team can maintain it.</p>
+          <p>Reporting becomes routine. Structure is documented so your team can maintain it monthly.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="section">
+  <!-- US VS AI -->
+  <section class="section vs-section" style="padding-top:0">
     <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">OUR SERVICES</p>
-        <h2 class="h2">SERVICES</h2>
+      <div class="section-rule">
+        <div class="section-rule-line"></div>
+        <span class="section-rule-label">The difference</span>
+        <div class="section-rule-line"></div>
+      </div>
+
+      <div class="vs-header">
+        <span class="eyebrow">Why not just use AI?</span>
+        <h2 class="h2">Hypnic vs<br/><em>AI tools.</em></h2>
+        <p class="vs-intro">AI is a powerful tool — for people who already have clean, structured data. Our job is to get your data to that point first, and build the system that keeps it there every month. That is the part AI cannot do for you.</p>
+      </div>
+
+      <div class="vs-grid">
+
+        <!-- Column headers -->
+        <div class="vs-col-label vs-spacer"></div>
+        <div class="vs-col-label vs-us">
+          <span class="vs-badge us">Hypnic</span>
+        </div>
+        <div class="vs-col-label vs-ai">
+          <span class="vs-badge ai">AI Tools</span>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="vs-row-label">Understands messy, unstructured SA data</div>
+        <div class="vs-cell us">
+          <span class="vs-check">✓</span>
+          <span class="vs-detail">We start with your raw exports — however messy</span>
+        </div>
+        <div class="vs-cell ai">
+          <span class="vs-cross">✗</span>
+          <span class="vs-detail">Can help with data issues but cannot replace structured, context-specific cleaning</span>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="vs-row-label">Built for Sage, Pastel & Excel workflows</div>
+        <div class="vs-cell us">
+          <span class="vs-check">✓</span>
+          <span class="vs-detail">Designed around how SA businesses actually operate</span>
+        </div>
+        <div class="vs-cell ai">
+          <span class="vs-cross">✗</span>
+          <span class="vs-detail">Generic — not built for local tools or context</span>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="vs-row-label">Delivers a repeatable monthly system</div>
+        <div class="vs-cell us">
+          <span class="vs-check">✓</span>
+          <span class="vs-detail">Your team runs the same clean report every month</span>
+        </div>
+        <div class="vs-cell ai">
+          <span class="vs-cross">✗</span>
+          <span class="vs-detail">Requires you to know exactly what to ask each time</span>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="vs-row-label">Human accountability when something breaks</div>
+        <div class="vs-cell us">
+          <span class="vs-check">✓</span>
+          <span class="vs-detail">A real person you can call — not a chatbot</span>
+        </div>
+        <div class="vs-cell ai">
+          <span class="vs-cross">✗</span>
+          <span class="vs-detail">Gives you an output and leaves</span>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="vs-row-label">Understands your business context</div>
+        <div class="vs-cell us">
+          <span class="vs-check">✓</span>
+          <span class="vs-detail">We learn how your specific operation works</span>
+        </div>
+        <div class="vs-cell ai">
+          <span class="vs-cross">✗</span>
+          <span class="vs-detail">No knowledge of your industry, team, or goals</span>
+        </div>
+
+        <!-- Row 6 -->
+        <div class="vs-row-label">Works on data that is too messy for AI</div>
+        <div class="vs-cell us">
+          <span class="vs-check">✓</span>
+          <span class="vs-detail">Cleaning messy data is exactly where we start</span>
+        </div>
+        <div class="vs-cell ai">
+          <span class="vs-cross">✗</span>
+          <span class="vs-detail">Can flag issues but cannot build a repeatable system tailored to your operation</span>
+        </div>
+
+      </div>
+
+      <div class="vs-footer-note">
+        <div class="vs-note-line"></div>
+        <p>Think of it this way — AI is what comes <em>after</em> Hypnic. We build the foundation. AI can help you do more with it later.</p>
+        <div class="vs-note-line"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-rule">
+        <div class="section-rule-line"></div>
+        <span class="section-rule-label">Services</span>
+        <div class="section-rule-line"></div>
+      </div>
+
+      <div style="margin-bottom:32px;">
+        <span class="eyebrow">What we deliver</span>
+        <h2 class="h2">Services</h2>
       </div>
 
       <div class="services-grid">
         <div class="service-col">
           <h3 class="h3">Data Cleaning & Structure</h3>
           <ul class="service-list">
-            <li>Excel/CSV cleanup & standardization</li>
+            <li>Excel/CSV cleanup & standardisation</li>
             <li>Duplicate handling & missing value rules</li>
             <li>Column naming & schema alignment</li>
             <li>Validation checks & consistency rules</li>
           </ul>
         </div>
-
         <div class="service-col">
           <h3 class="h3">Reporting & KPIs</h3>
           <ul class="service-list">
@@ -224,83 +426,95 @@
             <li>Metric definitions & calculation notes</li>
           </ul>
         </div>
-
         <div class="service-col">
           <h3 class="h3">Documentation & Handover</h3>
           <ul class="service-list">
             <li>Data dictionary / field definitions</li>
             <li>Process notes (how to keep it clean)</li>
             <li>Structured folder + naming conventions</li>
-            <li>Walkthrough call + Q&A</li>
+            <li>Walkthrough call + Q&A session</li>
           </ul>
         </div>
       </div>
 
       <div class="services-cta">
-  <p class="muted">
-    Working from spreadsheets? We’ll turn messy Excel/CSV into decision-ready reporting in 7 days.
-  </p>
-  <a class="btn ghost" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a Call</a>
-</div>
+        <p>Working from spreadsheets? We will turn messy Excel/CSV into decision-ready reporting in 7 days.</p>
+        <a class="btn ghost" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a Call</a>
+      </div>
     </div>
   </section>
 
   <!-- PROCESS -->
-  <section class="section" aria-labelledby="process-title">
+  <section class="section" style="padding-top:0" aria-labelledby="process-title">
     <div class="container">
-      <div class="process-layout">
-  
-  <div class="process-left">
-    <p class="eyebrow">How it works</p>
-    <h2 id="process-title" class="h2">The Process</h2>
-
-  <div class="process-right">
-    <img src="assets/process-visual.gif" alt="Operational data process visual" />
-  </div>
-
-</div>
-
-      <div class="process-tabs" role="tablist" aria-label="Process tabs">
-        <button class="tab active" role="tab" aria-selected="true" data-tab="project">Project Sprint</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="subscription">Ongoing Support</button>
+      <div class="section-rule">
+        <div class="section-rule-line"></div>
+        <span class="section-rule-label">Process</span>
+        <div class="section-rule-line"></div>
       </div>
 
-      <div class="process-panels">
-        <div class="panel active" data-panel="project">
-          <h3 class="h3">Operational Data Clarity Sprint (7 days)</h3>
-          <ol class="steps">
-            <li><b>Day 1:</b> Intake + goals + data audit</li>
-            <li><b>Day 2–3:</b> Cleaning, standardization, and structure</li>
-            <li><b>Day 4–5:</b> KPI template + dashboard</li>
-            <li><b>Day 6:</b> Insight summary + recommendations</li>
-            <li><b>Day 7:</b> Handover + walkthrough call</li>
-          </ol>
+      <div style="margin-bottom:40px;">
+        <span class="eyebrow">How it works</span>
+        <h2 id="process-title" class="h2">The Process</h2>
+      </div>
+
+      <div class="process-layout">
+        <div class="process-left">
+          <div class="process-tabs" role="tablist" aria-label="Process tabs">
+            <button class="tab active" role="tab" aria-selected="true" data-tab="project">Project Sprint</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="subscription">Ongoing Support</button>
+          </div>
+
+          <div class="process-panels">
+            <div class="panel active" data-panel="project">
+              <h3 class="h3" style="margin-bottom:16px;color:var(--accent)">Operational Data Clarity Sprint — 7 days</h3>
+              <ol class="steps">
+                <li><b>Day 1</b> Intake, goals & data audit</li>
+                <li><b>Day 2–3</b> Cleaning, standardisation & structure</li>
+                <li><b>Day 4–5</b> KPI template & dashboard</li>
+                <li><b>Day 6</b> Insight summary & recommendations</li>
+                <li><b>Day 7</b> Handover + walkthrough call</li>
+              </ol>
+            </div>
+            <div class="panel" data-panel="subscription">
+              <h3 class="h3" style="margin-bottom:16px;color:var(--accent)">Monthly Reporting Support</h3>
+              <p class="muted" style="font-size:13px;margin-bottom:16px;line-height:1.7;">
+                For teams that want ongoing help maintaining clean data and producing consistent reporting packs every month.
+              </p>
+              <ul class="bullets">
+                <li>Monthly/weekly report refresh</li>
+                <li>Data hygiene checks</li>
+                <li>Template improvements</li>
+                <li>Priority support channel</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="panel" data-panel="subscription">
-          <h3 class="h3">Monthly Reporting Support</h3>
-          <p class="muted">
-            For teams that want ongoing help maintaining clean data and producing consistent reporting packs.
-          </p>
-          <ul class="bullets">
-            <li>Monthly/weekly report refresh</li>
-            <li>Data hygiene checks</li>
-            <li>Template improvements</li>
-            <li>Priority support</li>
-          </ul>
+        <div class="process-right">
+          <!-- PLACEHOLDER: Replace with a real process diagram or GIF -->
+          <div class="process-visual-wrap">
+            <img src="assets/process-visual.gif" alt="Operational data process visual" />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRICING (QUOTE-BASED ONLY) -->
-  <section id="pricing" class="section">
+  <!-- PRICING -->
+  <section id="pricing" class="section" style="padding-top:0">
     <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Pricing</p>
+      <div class="section-rule">
+        <div class="section-rule-line"></div>
+        <span class="section-rule-label">Pricing</span>
+        <div class="section-rule-line"></div>
+      </div>
+
+      <div style="margin-bottom:32px;">
+        <span class="eyebrow">Transparent pricing</span>
         <h2 class="h2">Quote-based</h2>
-        <p class="muted">
-          Every dataset is different. We scope quickly and quote based on complexity, rows/columns, and reporting needs.
+        <p class="muted" style="margin-top:12px;font-size:14px;max-width:480px;line-height:1.7;">
+          Every dataset is different. We scope quickly and quote based on complexity, volume, and reporting needs.
         </p>
       </div>
 
@@ -309,11 +523,11 @@
           <div class="badge">Primary Offer</div>
           <div class="price-top">
             <h3 class="h3">Operational Data Clarity Sprint</h3>
-            <p class="muted">7 days</p>
+            <p class="muted" style="font-size:12px;margin-top:4px;">7 days</p>
             <p class="price">Quote-based</p>
           </div>
           <ul class="bullets">
-            <li>Cleanup + standardization</li>
+            <li>Cleanup + standardisation</li>
             <li>Structured dataset</li>
             <li>KPI dashboard (Excel)</li>
             <li>Leadership summary</li>
@@ -321,14 +535,14 @@
           </ul>
           <div class="row">
             <a class="btn full" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a Call</a>
-            <a class="btn full ghost" href="mailto:hello@hypnic.net">Email for Quote</a>
+            <a class="btn full ghost" href="mailto:business@hypnic.net">Email for Quote</a>
           </div>
         </article>
 
         <article class="price-card">
           <div class="price-top">
             <h3 class="h3">Monthly Reporting Support</h3>
-            <p class="muted">Ongoing clarity</p>
+            <p class="muted" style="font-size:12px;margin-top:4px;">Ongoing clarity</p>
             <p class="price">Quote-based</p>
           </div>
           <ul class="bullets">
@@ -345,7 +559,7 @@
         <article class="price-card">
           <div class="price-top">
             <h3 class="h3">Custom Projects</h3>
-            <p class="muted">Flexible scope</p>
+            <p class="muted" style="font-size:12px;margin-top:4px;">Flexible scope</p>
             <p class="price">Quote-based</p>
           </div>
           <ul class="bullets">
@@ -355,7 +569,7 @@
             <li>Extended documentation</li>
           </ul>
           <div class="row">
-            <a class="btn full ghost" href="mailto:hello@hypnic.net">Request Quote</a>
+            <a class="btn full ghost" href="mailto:business@hypnic.net">Request Quote</a>
           </div>
         </article>
       </div>
@@ -363,48 +577,51 @@
       <div class="cta-strip">
         <div>
           <h3 class="h3">Still have questions?</h3>
-          <p class="muted">Book a free 30-minute fit check.</p>
+          <p>Book a free 30-minute fit check — no commitment required.</p>
         </div>
-        <a class="btn" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book</a>
+        <a class="btn" href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a Call</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-left">
-        <div class="footer-brand">
-          <img src="assets/logo.png" alt="Hypnic logo" />
-          <div>
-            <p class="footer-title">Hypnic</p>
-            <p class="muted tiny">Data Systems</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-left">
+          <div class="footer-brand">
+            <img src="assets/logo.png" alt="Hypnic logo" />
+            <div>
+              <p class="footer-title">Hypnic</p>
+              <p class="muted tiny" style="margin-top:2px;letter-spacing:0.1em;text-transform:uppercase;">Data Systems</p>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Operational data clarity for South African SMEs. We turn spreadsheet chaos into structured, decision-ready reporting — in 7 days.
+          </p>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-col">
+            <span class="footer-label">Contact</span>
+            <a href="mailto:business@hypnic.net">business@hypnic.net</a>
+            <a href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a call</a>
+            <a href="https://linkedin.com/company/hypnic" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">Navigate</span>
+            <a href="#about">About</a>
+            <a href="#works">Case Studies</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
           </div>
         </div>
-        <p class="muted">
-          Operational Data Clarity for spreadsheet-based teams.
-        </p>
       </div>
 
-      <div class="footer-right">
-        <div class="footer-col">
-          <p class="footer-label">Contact</p>
-          <a href="mailto:hello@hypnic.net">hello@hypnic.net</a>
-          <a href="https://calendly.com/business-hypnic/30min" target="_blank" rel="noreferrer">Book a call</a>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-label">Sections</p>
-          <a href="#about">About</a>
-          <a href="#works">Works</a>
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
-        </div>
+      <div class="footer-bottom">
+        <p class="muted tiny">© <span id="year"></span> Hypnic Proprietary Limited. All rights reserved.</p>
+        <p class="muted tiny"><a href="https://hypnic.net" style="color:var(--muted);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">hypnic.net</a></p>
       </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p class="muted tiny">© <span id="year"></span> Hypnic. All rights reserved.</p>
     </div>
   </footer>
 
